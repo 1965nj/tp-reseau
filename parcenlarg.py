@@ -22,16 +22,19 @@ def trouver_chemins(graphe, depart, arrivee):
 
 # Exemple d'utilisation
 graphe = {
-    'A': ['B', 'C'],
-    'B': ['A','C', 'D'],
-    'C': ['A','B','D','E'],
-    'D': ['B','C','E','F'],
-    'E': [ 'C','D','F'],
-    'F': ['E','D']
+    'A': ['B', 'F'],
+    'B': ['A','C', 'D','G'],
+    'C': ['B','E'],
+    'D': ['B','I'],
+    'E': [ 'C','I'],
+    'F': ['A','G','H'],
+    'G': ['B','F','I'],
+    'I': ['D','G','H','E'],
+    'H': ['I','F']
 }
 
 depart = 'A'
-arrivee = 'F'
+arrivee = 'I'
 
 tous_chemins = trouver_chemins(graphe, depart, arrivee)
 
